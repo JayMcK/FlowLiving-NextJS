@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -57,9 +58,9 @@ export default function Contact({ setValue, setSelectedIndex }) {
   const classes = useStyles();
   const theme = useTheme();
 
-  const matchesXS = theme.breakpoints.down("xs");
-  const matchesSM = theme.breakpoints.down("sm");
-  const matchesMD = theme.breakpoints.down("md");
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const [name, setName] = useState("");
   const [nameHelper, setNameHelper] = useState("");
@@ -157,15 +158,13 @@ export default function Contact({ setValue, setSelectedIndex }) {
               style={{
                 marginTop: "2em",
                 marginBottom: "1em",
-                marginLeft: matchesMD ? "auto" : undefined,
-                marginRight: matchesMD ? "auto" : undefined,
               }}
-              align={matchesSM ? "center" : undefined}
+              align="center"
             >
               <Typography variant="h1">Contact Us</Typography>
               <Typography variant="h2">Let's talk!</Typography>
             </Grid>
-            <Grid item align={matchesMD ? "center" : undefined}>
+            <Grid item align="center">
               <Typography paragraph>
                 <img
                   src="/assets/telephone.svg"
@@ -177,11 +176,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
                 </a>
               </Typography>
             </Grid>
-            <Grid
-              item
-              align={matchesMD ? "center" : undefined}
-              style={{ marginBottom: "1em" }}
-            >
+            <Grid item align="center" style={{ marginBottom: "1em" }}>
               <Typography>
                 <img
                   src="/assets/envelope.svg"
