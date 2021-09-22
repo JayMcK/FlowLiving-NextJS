@@ -11,6 +11,8 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
+import SnackBar from "../commonComponents/SnackBar";
+
 const useStyles = makeStyles((theme) => ({
   socialMediaIcon: {
     height: "3em",
@@ -155,6 +157,7 @@ export default function Footer({
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleChange = (e) => {
     switch (e.target.id) {
@@ -167,6 +170,13 @@ export default function Footer({
       default:
         break;
     }
+  };
+
+  const handleSubmit = () => {
+    setDialogOpen(false);
+    setName("");
+    setEmail("");
+    setSnackbarOpen(true);
   };
 
   const handleScrollToTop = () => {
@@ -579,6 +589,7 @@ export default function Footer({
                 <Button
                   className={classes.submitButton}
                   style={{ width: matchesXS ? "15em" : "20em" }}
+                  onClick={handleSubmit}
                 >
                   Submit
                 </Button>
@@ -596,6 +607,7 @@ export default function Footer({
           </Grid>
         </DialogContent>
       </Dialog>
+      <SnackBar snackbarOpen={snackbarOpen} setSnackbarOpen={setSnackbarOpen} />
     </Fragment>
   );
 }
