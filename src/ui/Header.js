@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useState, Fragment, useEffect, useMemo } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../Link";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -217,80 +217,86 @@ export default function Header({
     });
   }
 
-  menuOptions = [
-    {
-      name: "All Services",
-      activeIndex: 1,
-      selectedIndex: 0,
-      link: "/services",
-      icon: <AllInclusiveIcon color="secondary" fontSize="small" />,
-    },
-    {
-      name: "Reiki Healing",
-      activeIndex: 1,
-      selectedIndex: 1,
-      link: "/reiki",
-      icon: <Brightness5Icon color="secondary" fontSize="small" />,
-    },
-    {
-      name: "Reflexology",
-      activeIndex: 1,
-      selectedIndex: 2,
-      link: "/reflexology",
-      icon: <TouchAppIcon color="secondary" fontSize="small" />,
-    },
-    {
-      name: "Tarot Reading",
-      activeIndex: 1,
-      selectedIndex: 3,
-      link: "/tarot",
-      icon: <ImageSearchIcon color="secondary" fontSize="small" />,
-    },
-    {
-      name: "Spiritual Counselling",
-      activeIndex: 1,
-      selectedIndex: 4,
-      link: "/counselling",
-      icon: <QuestionAnswerIcon color="secondary" fontSize="small" />,
-    },
-  ];
+  menuOptions = useMemo(
+    () => [
+      {
+        name: "All Services",
+        activeIndex: 1,
+        selectedIndex: 0,
+        link: "/services",
+        icon: <AllInclusiveIcon color="secondary" fontSize="small" />,
+      },
+      {
+        name: "Reiki Healing",
+        activeIndex: 1,
+        selectedIndex: 1,
+        link: "/reiki",
+        icon: <Brightness5Icon color="secondary" fontSize="small" />,
+      },
+      {
+        name: "Reflexology",
+        activeIndex: 1,
+        selectedIndex: 2,
+        link: "/reflexology",
+        icon: <TouchAppIcon color="secondary" fontSize="small" />,
+      },
+      {
+        name: "Tarot Reading",
+        activeIndex: 1,
+        selectedIndex: 3,
+        link: "/tarot",
+        icon: <ImageSearchIcon color="secondary" fontSize="small" />,
+      },
+      {
+        name: "Spiritual Counselling",
+        activeIndex: 1,
+        selectedIndex: 4,
+        link: "/counselling",
+        icon: <QuestionAnswerIcon color="secondary" fontSize="small" />,
+      },
+    ],
+    []
+  );
 
-  routes = [
-    {
-      name: "Home",
-      activeIndex: 0,
-      link: "/",
-      icon: <HomeIcon color="secondary" fontSize="medium" />,
-    },
-    {
-      name: "All Services",
-      activeIndex: 1,
-      selectedIndex: 0,
-      link: "/services",
-      icon: <AllInclusiveIcon color="secondary" fontSize="medium" />,
-      ariaOwns: anchorEl ? "menu" : undefined,
-      ariaPopup: anchorEl ? true : undefined,
-      mouseOver: (event) => handleClick(event),
-    },
-    {
-      name: "Pricing",
-      activeIndex: 2,
-      link: "/pricing",
-      icon: <LocalOfferIcon color="secondary" fontSize="medium" />,
-    },
-    {
-      name: "About Us",
-      activeIndex: 3,
-      link: "/about",
-      icon: <PersonIcon color="secondary" fontSize="medium" />,
-    },
-    {
-      name: "Contact Us",
-      activeIndex: 4,
-      link: "/contact",
-      icon: <PhoneIcon color="secondary" fontSize="medium" />,
-    },
-  ];
+  routes = useMemo(
+    () => [
+      {
+        name: "Home",
+        activeIndex: 0,
+        link: "/",
+        icon: <HomeIcon color="secondary" fontSize="medium" />,
+      },
+      {
+        name: "All Services",
+        activeIndex: 1,
+        selectedIndex: 0,
+        link: "/services",
+        icon: <AllInclusiveIcon color="secondary" fontSize="medium" />,
+        ariaOwns: anchorEl ? "menu" : undefined,
+        ariaPopup: anchorEl ? true : undefined,
+        mouseOver: (event) => handleClick(event),
+      },
+      {
+        name: "Pricing",
+        activeIndex: 2,
+        link: "/pricing",
+        icon: <LocalOfferIcon color="secondary" fontSize="medium" />,
+      },
+      {
+        name: "About Us",
+        activeIndex: 3,
+        link: "/about",
+        icon: <PersonIcon color="secondary" fontSize="medium" />,
+      },
+      {
+        name: "Contact Us",
+        activeIndex: 4,
+        link: "/contact",
+        icon: <PhoneIcon color="secondary" fontSize="medium" />,
+      },
+    ],
+    [anchorEl]
+  );
 
   const tabs = (
     <Fragment>
