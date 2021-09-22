@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -113,6 +114,22 @@ export default function About({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">Pricing | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Holistic healing to live in the Flow | Check out our prices and deals for our available healing services."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Pricing"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid
         container
         direction="column"

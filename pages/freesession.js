@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -162,6 +163,22 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
   ];
   return (
     <Grid item>
+      <Head>
+        <title key="title">Free Session Sign Up | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Sign up now for a free 30minute Reiki, Reflexology, Tarot Reading or Spiritual Counselling session to get a taste of what Flow Living has to offer."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Free Session Sign Up"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid item container direction="column" className={classes.pageContainer}>
         <Grid container direction="row">
           <Hidden mdDown>

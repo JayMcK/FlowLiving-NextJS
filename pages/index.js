@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../src/Link";
 import Typography from "@material-ui/core/Typography";
@@ -211,6 +212,24 @@ export default function Home({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">
+          Reiki, Reflexology, Tarot and Counselling Services | Flow Living
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Alernative, holistic healing methods tailored to the unique needs of each individual client. Sign up today for a free first 30minute session!"
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Flow Living"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid container direction="column" className={classes.homeContainer}>
         <Grid item>
           {/* --- HERO BLOCK --- */}

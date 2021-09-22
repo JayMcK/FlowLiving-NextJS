@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../Link";
 import Typography from "@material-ui/core/Typography";
@@ -47,19 +47,19 @@ export default function Service({
       case "/reiki":
         setValue(1);
         setSelectedIndex(2);
-        return "/reflexology";
+        break;
       case "/reflexology":
         setValue(1);
         setSelectedIndex(3);
-        return "/tarot";
+        break;
       case "/tarot":
         setValue(1);
         setSelectedIndex(4);
-        return "/counselling";
+        break;
       case "/counselling":
         setValue(1);
         setSelectedIndex(5);
-        return "/reiki";
+        break;
       default:
         break;
     }
@@ -70,19 +70,19 @@ export default function Service({
       case "/reiki":
         setValue(1);
         setSelectedIndex(4);
-        return "/counselling";
+        break;
       case "/reflexology":
         setValue(1);
         setSelectedIndex(3);
-        return "/reiki";
+        break;
       case "/tarot":
         setValue(1);
         setSelectedIndex(2);
-        return "/reflexology";
+        break;
       case "/counselling":
         setValue(1);
         setSelectedIndex(1);
-        return "/tarot";
+        break;
       default:
         break;
     }
@@ -117,7 +117,17 @@ export default function Service({
                 handlePageBack();
               }}
               component={Link}
-              href={handlePageBack}
+              href={
+                info.title === "Reiki"
+                  ? "/counselling"
+                  : info.title === "Reflexology"
+                  ? "/reiki"
+                  : info.title === "Tarot"
+                  ? "/reflexology"
+                  : info.title === "Spiritual Counselling"
+                  ? "/tarot"
+                  : null
+              }
             >
               <img
                 src="/assets/servicesLeftArrow.svg"
@@ -146,7 +156,17 @@ export default function Service({
                 handlePageForward();
               }}
               component={Link}
-              href={handlePageForward}
+              href={
+                info.title === "Reiki"
+                  ? "/reflexology"
+                  : info.title === "Reflexology"
+                  ? "/tarot"
+                  : info.title === "Tarot"
+                  ? "/counselling"
+                  : info.title === "Spiritual Counselling"
+                  ? "/reiki"
+                  : null
+              }
             >
               <img
                 src="/assets/servicesRightArrow.svg"

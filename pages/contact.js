@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -135,6 +136,22 @@ export default function Contact({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">Contact Us | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Let us guide you through deciding which of our services to choose. Send us a message with your questions/inquiries to get started!"
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Contact Us"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid item container direction="column" className={classes.pageContainer}>
         <Grid container direction="row">
           <Grid item container direction="column" lg={4}>

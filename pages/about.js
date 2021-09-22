@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -52,6 +53,22 @@ export default function About({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">About Us - History & Team | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="We provide holistic healing methods from Reiki and Reflexology, to Tarot Readings and Counselling, to help you get into and stay in the flow. Get your first session free now!"
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Spiritual Counselling | About Us"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid container direction="column" className={classes.aboutContainer}>
         <Grid
           item

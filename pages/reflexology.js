@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -45,6 +46,22 @@ export default function Reflexology({
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">Reflexology - Services | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Our Reflexology service enables us to use the body as a guide to uncover and release trapped energy and relieve physical, mental and emotional tension."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Reflexology"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid
         container
         direction="column"

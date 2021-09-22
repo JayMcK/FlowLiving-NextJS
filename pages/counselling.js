@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -45,6 +46,24 @@ export default function Tarot({
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">
+          Spiritual Counselling - Services | Flow Living
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Our Spiritual Counselling is a holistic approach to therapy let us provide healing therapy which considers your physical, psychological, emotional and spiritual experiences."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Spiritual Counselling"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid
         container
         direction="column"

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -45,6 +46,22 @@ export default function Reiki({
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">Reiki - Services | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Our Reiki service is an energy-lead alternative healing process which uses the intuition of the practioner to remove energetic blockages in the body."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Reiki"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid container direction="column" className={classes.reikiContainer}>
         {/* --- REIKI BLOCK --- */}
         <Service

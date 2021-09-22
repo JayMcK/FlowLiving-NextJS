@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -41,6 +42,22 @@ export default function Tarot({
 
   return (
     <Grid item>
+      <Head>
+        <title key="title">Tarot Reading - Services | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Our Tarot Reading service combines spiritual insights with divination in order to provide guidance to the client, through challenging life experiences."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | Tarot"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid container direction="column" className={classes.tarotContainer}>
         {/* --- REIKI BLOCK --- */}
         <Service

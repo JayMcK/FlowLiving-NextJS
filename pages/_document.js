@@ -11,6 +11,12 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <link rel="icon" href="/favicon.svg" />
           <meta name="theme-color" content={Theme.palette.primary.main} />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://i.imgur.com/miZ2Twk.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="company logo" />
           <link
             href="https://fonts.googleapis.com/css2?family=Cookie&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap"
             rel="stylesheet"

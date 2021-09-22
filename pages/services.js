@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../src/Link";
 import Typography from "@material-ui/core/Typography";
@@ -42,6 +43,22 @@ export default function Services({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item style={{ marginTop: "1em" }}>
+      <Head>
+        <title key="title">All Services | Flow Living</title>
+        <meta
+          name="description"
+          key="description"
+          content="Offering Reiki, Reflexology, Tarot Reading and Spiritual Counselling, Flow Living is a comprehensive alternative healing service that continues to enable clients to live more in the Flow. Sign up today for your first free 30minute session."
+        />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="Reiki, Reflexology, Tarot and Counselling | All Services"
+        />
+        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
+        <meta property="og:url" key="og:url" content="" />
+        <link rel="canonical" key="canonical" href="" />
+      </Head>
       <Grid container direction="column" className={classes.servicesContainer}>
         <Grid
           item
