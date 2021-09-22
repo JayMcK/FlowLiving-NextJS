@@ -169,6 +169,7 @@ export default function Header({
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [previousURL, setPreviousURL] = useState("");
 
   let routes;
   let menuOptions;
@@ -193,18 +194,41 @@ export default function Header({
     setOpenMenu(false);
   };
 
+  // useEffect(() => {
+  //   [...menuOptions, ...routes].forEach((route) => {
+  //     switch (window.location.pathname) {
+  //       case `${route.link}`:
+  //         setValue(route.activeIndex);
+  //         setSelectedIndex(route.selectedIndex);
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //   });
+  // }, [value, setValue, selectedIndex, setSelectedIndex, menuOptions, routes]);
+
   useEffect(() => {
+    if (previousURL !== window.location.pathname) {
+      setPreviousURL(window.location.pathname);
+    }
+    checkPath();
+  }, [value, menuOptions, selectedIndex, routes]);
+
+  function checkPath() {
     [...menuOptions, ...routes].forEach((route) => {
       switch (window.location.pathname) {
         case `${route.link}`:
           setValue(route.activeIndex);
           setSelectedIndex(route.selectedIndex);
           break;
+        case "/freesession":
+          setValue(false);
+          break;
         default:
           break;
       }
     });
-  }, [value, setValue, selectedIndex, setSelectedIndex, menuOptions, routes]);
+  }
 
   menuOptions = [
     {
