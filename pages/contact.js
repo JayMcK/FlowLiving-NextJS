@@ -146,9 +146,16 @@ export default function Contact({ setValue, setSelectedIndex }) {
           key="og:title"
           content="Reiki, Reflexology, Tarot and Counselling | Contact Us"
         />
-        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="flowliving.vercel.app/contact"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/contact"
+        />
       </Head>
       <Grid item container direction="column" className={classes.pageContainer}>
         <Grid container direction="row">

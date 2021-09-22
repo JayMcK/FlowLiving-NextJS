@@ -226,9 +226,12 @@ export default function Home({ setValue, setSelectedIndex }) {
           key="og:title"
           content="Reiki, Reflexology, Tarot and Counselling | Flow Living"
         />
-        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta property="og:url" key="og:url" content="flowliving.vercel.app/" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/"
+        />
       </Head>
       <Grid container direction="column" className={classes.homeContainer}>
         <Grid item>

@@ -86,9 +86,16 @@ export default function About({ setValue, setSelectedIndex }) {
           key="og:title"
           content="Reiki, Reflexology, Tarot and Counselling | Pricing"
         />
-        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="flowliving.vercel.app/pricing"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/pricing"
+        />
       </Head>
       <Grid
         container

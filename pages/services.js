@@ -56,8 +56,16 @@ export default function Services({ setValue, setSelectedIndex }) {
           content="Reiki, Reflexology, Tarot and Counselling | All Services"
         />
         {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="flowliving.vercel.app/services"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/services"
+        />
       </Head>
       <Grid container direction="column" className={classes.servicesContainer}>
         <Grid

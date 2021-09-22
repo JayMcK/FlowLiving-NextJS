@@ -60,9 +60,16 @@ export default function Tarot({
           key="og:title"
           content="Reiki, Reflexology, Tarot and Counselling | Spiritual Counselling"
         />
-        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="flowliving.vercel.app/counselling"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/counselling"
+        />
       </Head>
       <Grid
         container

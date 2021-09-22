@@ -4,7 +4,7 @@ const formatDate = require("./formatDate");
 
 // ROBOTS.txt
 const robotsTxt = `User-agent: *
-Sitemap: https://fox-tree-kids-nextjs.vercel.app/sitemap_local.xml
+Sitemap: https://flowliving.vercel.app/sitemap_local.xml
 Disallow:`;
 
 fs.writeFileSync("public/robots.txt", robotsTxt);
@@ -22,8 +22,8 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
       (path) => `<url>
     ${
       path === "/index"
-        ? `<loc>https://fox-tree-kids-nextjs.vercel.app</loc>`
-        : `<loc>https://fox-tree-kids-nextjs.vercel.app${path}</loc>`
+        ? `<loc>https://flowliving.vercel.app</loc>`
+        : `<loc>https://flowliving.vercel.app${path}</loc>`
     }
     <lastmod>${
       pathsObj[path].lastModified

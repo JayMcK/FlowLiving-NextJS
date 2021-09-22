@@ -178,9 +178,16 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
           key="og:title"
           content="Reiki, Reflexology, Tarot and Counselling | Free Session Sign Up"
         />
-        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="flowliving.vercel.app/freesession"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/freesession"
+        />
       </Head>
       <Grid item container direction="column" className={classes.pageContainer}>
         <Grid container direction="row">

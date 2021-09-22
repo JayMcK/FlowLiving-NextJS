@@ -58,9 +58,16 @@ export default function Reiki({
           key="og:title"
           content="Reiki, Reflexology, Tarot and Counselling | Reiki"
         />
-        {/* --- FILL THIS IN AFTER DEPLOYMENT --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="flowliving.vercel.app/reiki"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://flowliving.vercel.app/reiki"
+        />
       </Head>
       <Grid container direction="column" className={classes.reikiContainer}>
         {/* --- REIKI BLOCK --- */}
