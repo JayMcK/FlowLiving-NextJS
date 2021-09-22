@@ -1,60 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider";
-import Checkbox from "@material-ui/core/Checkbox";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
 import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import Brightness5Icon from "@material-ui/icons/Brightness5";
-import TouchAppIcon from "@material-ui/icons/TouchApp";
-import ImageSearchIcon from "@material-ui/icons/ImageSearch";
-import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
-
 import CallToAction from "../src/ui/CallToAction";
-import Quote from "../src/commonComponents/Quote";
 import Prices from "../src/commonComponents/Prices";
 
 const useStyles = makeStyles((theme) => ({
   pricingContainer: {
     border: `1px solid ${theme.palette.common.gold}`,
-  },
-  buttonIcon: {
-    height: "10em",
-    width: "10em",
-  },
-  iconButton: {
-    "&:hover": {
-      backgroundColor: theme.palette.common.green,
-      borderRadius: 0,
-    },
-  },
-  sessionButton: {
-    textTransform: "none",
-    borderRadius: 0,
-    border: `2px solid ${theme.palette.common.green}`,
-    height: 50,
-    width: 200,
-  },
-  divider: {
-    backgroundColor: theme.palette.common.gold,
-    opacity: 0.5,
-  },
-  serviceButton: {
-    backgroundColor: "transparent",
-    "&:hover": { backgroundColor: theme.palette.secondary.light },
-    "&:focus": {
-      backgroundColor: theme.palette.secondary.light,
-    },
-    border: `1px solid ${theme.palette.common.green}`,
-    boxShadow: "none",
   },
   radioText: {
     color: theme.palette.common.red,

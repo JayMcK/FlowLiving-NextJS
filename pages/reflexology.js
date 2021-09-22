@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-
 import Service from "../src/commonComponents/Service";
 import CallToAction from "../src/ui/CallToAction";
 import Quote from "../src/commonComponents/Quote";

@@ -83,6 +83,7 @@ export default function CallToAction({ setValue, setSelectedIndex }) {
               src="/assets/rightArrowGreen.svg"
               alt="right arrow"
               className={classes.rightArrow}
+              style={{ marginLeft: "1em" }}
             />
           </Button>
         </Grid>
@@ -175,7 +176,7 @@ export default function CallToAction({ setValue, setSelectedIndex }) {
     <Grid item>
       <Grid container direction="column">
         <Grid item>
-          {/* --- HERO BLOCK --- */}
+          {/* --- CALL TO ACTION BLOCK --- */}
           <Hidden smDown>{fullPage}</Hidden>
           <Hidden mdUp>{smallPage}</Hidden>
         </Grid>

@@ -5,9 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Grid from "@material-ui/core/Grid";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Avatar from "@material-ui/core/Avatar";
-import Divider from "@material-ui/core/Divider";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -261,6 +258,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
             </Grid>
           </Grid>
           <Hidden mdDown>
+            {/* --- Hidden on Smaller Screens --- */}
             <Grid item container lg={8}>
               <img
                 src="/assets/contactBackground.png"

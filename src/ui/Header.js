@@ -194,19 +194,6 @@ export default function Header({
     setOpenMenu(false);
   };
 
-  // useEffect(() => {
-  //   [...menuOptions, ...routes].forEach((route) => {
-  //     switch (window.location.pathname) {
-  //       case `${route.link}`:
-  //         setValue(route.activeIndex);
-  //         setSelectedIndex(route.selectedIndex);
-  //         break;
-  //       default:
-  //         break;
-  //     }
-  //   });
-  // }, [value, setValue, selectedIndex, setSelectedIndex, menuOptions, routes]);
-
   useEffect(() => {
     if (previousURL !== window.location.pathname) {
       setPreviousURL(window.location.pathname);
