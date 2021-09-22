@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -100,27 +100,27 @@ export default function About({ setValue, setSelectedIndex }) {
           item
           style={{
             marginTop: "2em",
-            marginLeft: matchesXS ? 0 : "5em",
+            marginLeft: matchesSM ? 0 : "5em",
           }}
           align={matchesXS ? "center" : undefined}
         >
           {/* --- TITLE SECTION --- */}
-          <Typography variant="h1" align={matchesXS ? "center" : undefined}>
+          <Typography variant="h1" align={matchesSM ? "center" : undefined}>
             Pricing
           </Typography>
         </Grid>
         <Grid
           item
-          align="left"
+          align={matchesSM ? "center" : "left"}
           style={{
             marginBottom: "1em",
-            marginLeft: matchesXS ? "1em" : "5em",
-            marginRight: matchesXS ? "1em" : 0,
+            marginLeft: matchesSM ? "1em" : "5em",
+            marginRight: matchesSM ? "1em" : 0,
           }}
         >
           <Typography
             variant="h2"
-            align={matchesXS ? "center" : undefined}
+            align={matchesSM ? "center" : undefined}
             style={{
               lineHeight: 1,
             }}

@@ -155,7 +155,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
             <Grid
               item
               style={{
-                marginTop: "3em",
+                marginTop: "2em",
                 marginBottom: "1em",
                 marginLeft: matchesMD ? "auto" : undefined,
                 marginRight: matchesMD ? "auto" : undefined,

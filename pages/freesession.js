@@ -58,9 +58,9 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
   const classes = useStyles();
   const theme = useTheme();
 
-  const matchesXS = theme.breakpoints.down("xs");
-  const matchesSM = theme.breakpoints.down("sm");
-  const matchesMD = theme.breakpoints.down("md");
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const [name, setName] = useState("");
   const [nameHelper, setNameHelper] = useState("");
@@ -127,6 +127,9 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
         } else {
           setPhoneHelper("");
         }
+        break;
+      case "message":
+        setMessage(event.target.value);
         break;
       default:
         break;
@@ -252,7 +255,7 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
               container
               direction="column"
               style={{
-                maxWidth: "30em",
+                maxWidth: "40em",
                 marginTop: "2em",
               }}
             >
@@ -294,7 +297,7 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
               item
               container
               direction="column"
-              style={{ maxWidth: "30em", marginTop: "2em" }}
+              style={{ maxWidth: "40em", marginTop: "2em" }}
             >
               <Grid
                 item
@@ -305,7 +308,7 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
                   marginRight: "2em",
                 }}
               >
-                <Typography variant="h5">
+                <Typography variant="h5" align="center">
                   2. Preferred method of contact for organising free session
                 </Typography>
               </Grid>
@@ -421,7 +424,6 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
                 container
                 direction="column"
                 style={{
-                  maxWidth: "30em",
                   marginTop: "2em",
                 }}
               >
@@ -434,7 +436,10 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
                     marginRight: "2em",
                   }}
                 >
-                  <Typography variant="h5" align="center">
+                  <Typography
+                    variant="h5"
+                    align={matchesSM ? "center" : "left"}
+                  >
                     1. Which service would you like to experience?
                   </Typography>
                 </Grid>
@@ -463,7 +468,7 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
                 item
                 container
                 direction="column"
-                style={{ maxWidth: "30em", marginTop: "2em" }}
+                style={{ marginTop: "2em" }}
               >
                 <Grid
                   item
@@ -474,7 +479,10 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
                     marginRight: "2em",
                   }}
                 >
-                  <Typography variant="h5">
+                  <Typography
+                    align={matchesSM ? "center" : "left"}
+                    variant="h5"
+                  >
                     2. Preferred method of contact for organising free session
                   </Typography>
                 </Grid>

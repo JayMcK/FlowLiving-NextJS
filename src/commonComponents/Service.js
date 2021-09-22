@@ -15,8 +15,13 @@ const useStyles = makeStyles((theme) => ({
   },
   iconImage: {
     height: "15em",
+    [theme.breakpoints.down("md")]: {
+      height: "13em",
+      marginLeft: "0.5em",
+      marginRight: "0.5em",
+    },
     [theme.breakpoints.down("xs")]: {
-      height: "12.5em",
+      height: "12em",
     },
   },
   navArrow: {
@@ -182,7 +187,7 @@ export default function Service({
           <Grid
             container
             direction={matchesSM ? "column" : "row"}
-            style={{ marginBottom: "5em" }}
+            style={{ marginBottom: matchesSM ? "3em" : "5em" }}
           >
             {iconInfo.map((icon) => (
               <Grid
@@ -191,7 +196,7 @@ export default function Service({
                 container
                 direction="column"
                 key={icon.alt}
-                style={{ marginBottom: matchesSM ? "2em" : 0 }}
+                style={{ marginBottom: matchesSM ? "5em" : 0 }}
               >
                 <Grid item align="center" style={{ marginBottom: "1em" }}>
                   <Typography variant="h2">{icon.title}</Typography>

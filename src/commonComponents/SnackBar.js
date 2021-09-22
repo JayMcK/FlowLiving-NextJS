@@ -21,7 +21,7 @@ export default function SnackBar({ snackbarOpen, setSnackbarOpen }) {
     <Grid item>
       <Snackbar
         open={snackbarOpen}
-        autoHideDuration={6000}
+        autoHideDuration={4000}
         onClose={() => setSnackbarOpen(false)}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >

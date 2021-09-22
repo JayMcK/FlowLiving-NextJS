@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
   aboutContainer: {
     border: `1px solid ${theme.palette.common.gold}`,
   },
+  aboutText: {
+    color: theme.palette.grey[700],
+  },
 }));
 
 export default function About({ setValue, setSelectedIndex }) {
@@ -134,19 +137,27 @@ export default function About({ setValue, setSelectedIndex }) {
                 marginRight: matchesSM ? "1em" : 0,
               }}
             >
-              <Typography variant="body1" paragraph>
+              <Typography
+                variant="body1"
+                className={classes.aboutText}
+                paragraph
+              >
                 Navigating life can be hard, for people of all ages. Losing
                 loved ones, experiencing physical illness or ailments, changes
                 in lifestyle, the breaking down or experiencing challenges in
                 relationships, can all become too much for us all at times.
               </Typography>
-              <Typography variant="body1" paragraph>
+              <Typography
+                variant="body1"
+                className={classes.aboutText}
+                paragraph
+              >
                 Whilst mainstream medicine can be a tremendous help to some in
                 many situations, there is still a need for more holistic,
                 alternative methods of healing and treatment for many situations
                 and circumstances.
               </Typography>
-              <Typography variant="body1">
+              <Typography className={classes.aboutText} variant="body1">
                 Flow Living seeks to be an answer to this problem; providing a
                 variety of alternative, supportive treatment plans to aid the
                 ability to enjoy life more.
@@ -195,10 +206,10 @@ export default function About({ setValue, setSelectedIndex }) {
               marginLeft: matchesSM ? "1em" : 0,
             }}
           >
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" className={classes.aboutText} paragraph>
               Margaret McKenzie, Founder.
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" className={classes.aboutText} paragraph>
               I started my spiritual journey 20 years ago.
             </Typography>
           </Grid>
