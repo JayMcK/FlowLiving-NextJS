@@ -73,8 +73,8 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.h5,
     textTransform: "none",
     minWidth: 10,
-    marginLeft: "9px",
-    marginRight: "9px",
+    marginLeft: "5px",
+    marginRight: "5px",
   },
   tabContainer: {
     margin: "auto",
