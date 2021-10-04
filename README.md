@@ -1,4 +1,4 @@
-# My Portfolio - Flow Living
+# Flow Living
 
 Please visit the live site here: https://flowliving.vercel.app/
 
