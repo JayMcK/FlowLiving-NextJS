@@ -171,8 +171,8 @@ export default function Header({
   const [openDrawer, setOpenDrawer] = useState(false);
   const [previousURL, setPreviousURL] = useState("");
 
-  let routes;
-  let menuOptions;
+  let routes = [];
+  let menuOptions = [];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
